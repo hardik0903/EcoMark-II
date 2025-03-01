@@ -1,0 +1,542 @@
+/* src/components/Home.css */
+/* ============================================================
+   EcoMark Home Component Styles
+   Theme: Dark Blue + Light Green
+   ============================================================
+*/
+
+/* Global resets specific to the Home component */
+.home {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #004d40;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  min-height: 600px;
+  /* background-image: linear-gradient(rgba(0, 77, 64, 0.7), rgba(30, 58, 95, 0.9)), url('https://media.istockphoto.com/id/1356984498/photo/marble-green-malachite-texture-abstract-sea-teal-dark-turquoise-black-stone-rock-texture.jpg?s=612x612&w=0&k=20&c=FRDAim8g9H6EbseSjMEoGLd0Riq8SctG6QZz5ZAESZ0=');
+  background-size: cover;
+  background-position: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #B2DFDB;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #B2DFDB;
+  color: #1E3A5F;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  animation: fadeIn 2s ease-in;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* What Sustainability Means Section */
+.sustainability-meaning-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1E3A5F;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: #B2DFDB;
+  transform: translateX(-50%);
+}
+
+.sustainability-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sustainability-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  width: 280px;
+}
+
+.sustainability-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #E0F2F1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.sustainability-card h3 {
+  color: #1E3A5F;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sustainability-card p {
+  color: #004d40;
+  line-height: 1.6;
+}
+
+/* Core Tools Section */
+.core-tools-section {
+  background-color: #E0F2F1;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tool-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.energy-icon {
+  background-color: #FFD54F;
+  background-image: url('https://png.pngtree.com/png-vector/20241123/ourlarge/pngtree-yellow-lightning-bolt-clipart-energy-power-speed-electric-symbol-png-image_14544065.png');
+}
+
+.brands-icon {
+  background-color: #81C784;
+  background-image: url('https://png.pngtree.com/png-clipart/20190617/original/pngtree-hand-painted-watercolor-leaves-autumn-yellow-leaves-tree-leaves-png-image_3893761.jpg');
+}
+
+.news-icon {
+  background-color: #64B5F6;
+  background-image: url('https://png.pngtree.com/png-clipart/20230924/original/pngtree-yellow-and-black-breaking-news-banner-with-speech-bubble-and-megaphone-png-image_12670615.png');
+}
+
+.recommender-icon {
+  background-color: #FF8A65;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExsXQ6Zcy9YCRDvPNbba21-CTIlf4KGHO1d_vFsnIACVVNbkH6RQg0zTmzlFv60BxTFc&usqp=CAU');
+}
+
+.tool-card h3 {
+  color: #1E3A5F;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tool-card p {
+  color: #004d40;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.tool-link {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1E3A5F;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.tool-link:hover {
+  background-color: #142941;
+}
+
+/* Why It Matters Section */
+.why-matters-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.why-matters-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.why-matters-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.why-matters-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #004d40;
+}
+
+.why-matters-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-qTtPNiybqgJaYatjzJHNdlv0JtEAlp6veQ&s');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlights Section */
+.highlights-section {
+  padding: 5rem 2rem;
+  background-color: #E0F2F1;
+  text-align: center;
+}
+
+.highlights-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.highlight-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.highlights-list li {
+  margin-bottom: 1.2rem;
+  padding-left: 2rem;
+  position: relative;
+  color: #004d40;
+  font-size: 1.1rem;
+}
+
+.highlights-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1E3A5F;
+  font-weight: bold;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(30, 58, 95, 0.2);
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1E3A5F;
+  padding: 1rem 0;
+  transition: color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #142941;
+}
+
+.faq-arrow {
+  font-size: 1.5rem;
+  color: #1E3A5F;
+}
+
+.faq-question.active {
+  color: #004d40;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1.1rem;
+  color: #004d40;
+  padding: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.faq-answer.open {
+  display: block;
+  animation: fadeDown 0.5s ease-out;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer Section */
+.site-footer {
+  background-color: #1E3A5F;
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #B2DFDB;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col h3:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #B2DFDB;
+}
+
+.footer-col p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.footer-col ul li a:hover {
+  color: #B2DFDB;
+  transform: translateX(5px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(178, 223, 219, 0.2);
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  background-color: #B2DFDB;
+  transform: translateY(-5px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.facebook { background-image: url('https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg?semt=ais_hybrid'); }
+.twitter { background-image: url('https://e7.pngegg.com/pngimages/708/311/png-clipart-twitter-twitter-thumbnail.png'); }
+.instagram { background-image: url('https://www.citypng.com/public/uploads/preview/square-instagram-logo-photos-social-media-701751694793082uj6ej5fkfx.png'); }
+.linkedin { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllNbtXaEUaCuGkcHhD6Wqb7QzOD0KGeYgkw&s'); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(178, 223, 219, 0.2);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .why-matters-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .sustainability-cards,
+  .tools-grid {
+    gap: 1.5rem;
+  }
+  
+  .why-matters-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-section {
+    min-height: 500px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .sustainability-card,
+  .tool-card {
+    padding: 1.5rem;
+  }
+  
+  .why-matters-image {
+    height: 250px;
+  }
+}
