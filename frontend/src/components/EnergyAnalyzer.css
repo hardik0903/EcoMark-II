@@ -1,0 +1,169 @@
+/* Reset html/body to allow full height and remove default margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Import Poppins (bold & regular) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.energy-analyzer {
+  position: relative;
+  min-height: 100vh;
+  color: #fff; /* All text white by default */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background Video */
+.energy-bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* behind content */
+}
+
+/* Main Content Overlay */
+.energy-analyzer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Heading (Analyzer Title) */
+.energy-analyzer-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 700; /* Bold */
+}
+
+/* Form Container */
+.energy-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Labels in bold white */
+.energy-form label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs:
+   - background #d9d9d9
+   - text color #000 for contrast
+*/
+.energy-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: #d9d9d9;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Regular */
+  outline: none;
+}
+
+/* Analyze Button:
+   - background white
+   - text color #000
+   - bold Poppins
+*/
+.energy-form button {
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Bold */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.energy-form button:hover {
+  filter: brightness(0.9);
+}
+
+/* Results Section */
+.results {
+  margin-top: 3rem;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1); /* translucent white block behind the chart */
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Score Section (replacing gauge) */
+.score-section {
+  margin-bottom: 2rem;
+}
+
+.score-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 700; /* Bold heading */
+}
+
+.score-section p {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 400; /* Regular text */
+}
+
+/* Recommendations */
+.recommendations {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.recommendations h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.recommendations ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.recommendations li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .energy-analyzer-content {
+    padding: 40px 10px;
+  }
+  .energy-form {
+    width: 100%;
+  }
+  .chart-container {
+    margin-bottom: 1.5rem;
+  }
+}

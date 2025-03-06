@@ -1,0 +1,182 @@
+/* src/components/SustainableRecommender.css */
+
+/* Import Poppins font (regular & bold) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Ensure the body or .sustainable-recommender uses Poppins */
+.sustainable-recommender {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* White text over dark background video */
+  overflow: hidden;
+}
+
+/* Background video styling */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Content container to keep everything centered & readable */
+.recommender-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+  border-radius: 8px;
+  margin-top: 5rem;
+}
+
+/* Title styling */
+.recommender-title {
+  font-weight: 700; /* Bold for Poppins */
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-weight: 400; /* Regular for Poppins */
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Form styles */
+.recommender-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Button with the new color (#545454) */
+button {
+  padding: 0.7rem 1.5rem;
+  background: #545454;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #444;
+}
+
+button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error {
+  color: #ff5555;
+  margin-top: 0.5rem;
+}
+
+/* Recommendations container */
+.recommendations-results {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* Habits section */
+.habits-section h2,
+.products-section h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Habits list */
+.habits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.habit-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.habit-card i {
+  margin-right: 0.5rem;
+  color: #6adb76; /* A green check icon color */
+  font-size: 1.2rem;
+}
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s;
+  min-height: 180px;
+  justify-content: center;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-placeholder {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-now {
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  color: #6adb76; /* Subtle green link color */
+}

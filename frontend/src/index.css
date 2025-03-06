@@ -1,0 +1,408 @@
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use Poppins for main text, Old Standard for facts text */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;  /* Dark background */
+  color: #ea3e09;          /* Main text color: orange (#ea3e09) */
+  line-height: 1.6;
+  overflow-x: hidden;       /* If you want the video to scroll with the page, consider removing or adjusting this */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Brand on left, links on right */
+  align-items: center;
+  padding: 0;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Minimal horizontal padding */
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ea3e09; /* Orange for brand name */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.nav-links {
+  font-size: 1rem;
+  color: #ea3e09; /* Orange for navbar links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links:hover {
+  color: #fff; /* Hover effect to white */
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700; /* Bold for Poppins */
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* "Get Started" Button */
+.get-started-btn {
+  background: #ea3e09;
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 24px;
+  padding: 16px 32px; /* Larger padding */
+  font-size: 1.2rem;  /* Slightly larger font size */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background: #ff5520;
+  transform: translateY(-2px);
+}
+
+/* Facts Display at the bottom */
+.facts-display {
+  position: fixed;
+  bottom: 0;
+  left: 0;       
+  right: 0;      
+  text-align: center;
+  font-size: 1.2rem;
+  color: #00ff30;
+  z-index: 999;
+  font-family: 'Old Standard TT', serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+}
+
+/* Sections */
+.sustainability-meaning-section,
+.core-tools-section,
+.faq-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Cards for Sustainability Meaning Section */
+.sustainability-cards {
+  display: flex;
+  /* Align items so each card matches the tallest card in the row */
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin-top: 40px;
+}
+
+.sustainability-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  width: 300px;       /* Fixed width for consistent card size */
+  padding: 20px;
+  display: flex;      /* Let contents stack in a column */
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: none;
+}
+
+.sustainability-card:hover {
+  transform: none;
+}
+
+.icon-wrapper {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Tools Grid: Force 4 columns on larger screens */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Each Tool Card */
+.tool-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px; /* Reduced padding */
+  transition: none;
+  text-align: center;
+}
+
+/* Title, Description, and Link spacing */
+.tool-card h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.tool-card p {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.tool-card .tool-link {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: #ea3e09;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tool-card .tool-link:hover {
+  color: #fff;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ea3e09;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
+}
+
+/* FAQ question bold */
+.faq-question {
+  background: none;
+  border: none;
+  color: #ea3e09;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.faq-question:focus {
+  outline: none;
+}
+
+.faq-arrow {
+  float: right;
+  color: #ea3e09;
+}
+
+/* FAQ answer normal weight */
+.faq-answer p {
+  font-weight: 400;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #ea3e09;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 40px 20px;
+  color: #ea3e09;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Make "EcoMark", "Resources", "About" bigger & fade */
+.footer-col h3 {
+  margin-bottom: 10px;
+  color: #ea3e09;
+  font-weight: 700;
+  font-size: 2rem; /* Increase size */
+  position: relative;
+  text-shadow: 0 3px 5px rgba(0,0,0,0.8); /* Slight black shadow/fade from bottom */
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #ea3e09;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #ea3e09;
+}
+
+/* Responsive: Adjust grid for smaller screens */
+@media (max-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer Collapsible Items */
+.footer-collapsible-item {
+  margin-bottom: 6px;
+}
+
+.footer-collapsible-button {
+  background: none;
+  border: none;
+  color: #ea3e09;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  padding: 4px;
+  display: inline-flex;
+  justify-content: space-between; /* Title left, arrow right */
+  align-items: center;
+}
+
+.footer-collapsible-button:hover {
+  color: #fff;
+}
+
+.footer-arrow {
+  margin-left: 8px;
+}
+
+.footer-collapsible-content {
+  margin-left: 4px;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color: #ea3e09;
+}

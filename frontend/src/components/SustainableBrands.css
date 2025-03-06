@@ -1,0 +1,168 @@
+/* src/components/SustainableBrands.css */
+
+.sustainable-brands {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif; /* Base font */
+  overflow: hidden;
+}
+
+/* Background Video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* Optional dark fade over the video */
+  z-index: -1;
+}
+
+/* Main Heading */
+.sustainable-brands h1 {
+  font-size: 3rem; /* increased */
+  font-weight: 700; /* Poppins Bold */
+  color: #a1c96a;   /* Title color */
+  margin-bottom: 1rem;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+input[type="text"] {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #a1c96a;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #a1c96a; /* Input text same as title color */
+  background: #000;
+}
+
+button {
+  padding: 0.8rem 1.8rem;
+  background: #647c42; /* Button background color */
+  color: #000;        /* Button text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:disabled {
+  background: #aaa;
+}
+
+/* Error Message */
+.error {
+  color: #ff5555;
+  margin-top: 0.5rem;
+}
+
+/* Analysis Results Container */
+.analysis-results {
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px; /* Increased width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings inside analysis results and news */
+.analysis-results h2 {
+  color: #a1c96a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem; /* increased */
+  margin-bottom: 1rem;
+}
+
+.analysis-results h3 {
+  color: #a1c96a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem; /* increased */
+  margin-bottom: 0.8rem;
+}
+
+.news-section h3 {
+  color: #a1c96a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem; /* increased */
+  margin-bottom: 0.8rem;
+}
+
+/* Normal text paragraphs */
+.analysis-results p,
+.news-section p,
+.news-section li,
+.report-content p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;              /* Regular weight */
+  color: #fff;
+  font-size: 1.2rem;             /* Increased overall text size */
+  line-height: 1.6;
+}
+
+/* Report Content Container */
+.report-content {
+  text-align: left;
+  max-width: 800px;              /* Increased width */
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* News Section */
+.news-section {
+  margin-top: 1.5rem;
+}
+
+/* Remove bullet points and adjust list styling */
+.news-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links in news section: white color, no underline */
+.news-section li a {
+  text-decoration: none;
+  color: #fff;      /* Set links to white */
+  font-size: 1.2rem;
+}
+
+/* Optional: Hover effect for links */
+.news-section li a:hover {
+  color: #8bc27a;  /* Slightly lighter green on hover */
+}
